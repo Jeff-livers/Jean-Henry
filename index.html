@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean Dubuffet — Autoportrait</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-image: url('Images/heerup-frie-kunstnere.jpg');
+      background-size: cover;
+      background-position: top left;
+      z-index: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: #C6423C;
+      opacity: 0.92;
+      z-index: 1;
+    }
+
+    .portrait {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      height: 40vh;
+      width: auto;
+      transform: translateX(50%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .portrait {
+        height: 40vh;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <img class="portrait" src="Images/dubuffet-autoportrait.png" alt="Jean Dubuffet, Autoportrait II, 1966" />
+
+</body>
+</html>
